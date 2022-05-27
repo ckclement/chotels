@@ -100,7 +100,7 @@
              
                 <div class="col-12">
                   <button type="submit" class="btn btn-success" name="submit" value="submit">Make payment</button><br>
-                  <a href="/clementHotels/index.php">Already paid? Return Home</a><br>
+                  <a href="/index.php">Already paid? Return Home</a><br>
                 </div>
               </form>
               <!--bs5 input-->
