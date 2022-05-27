@@ -126,7 +126,7 @@ You will also find exquisite dining opportunities here. Our dining selection inc
 	</div>
 	<div class="col-12">
 		<p class = "lead">Make your payment via our mpesa Till Numbers by clicking on the button below.</p>
-		<a href="/clementHotels/mpesa/index.php" class="btn btn-primary">MAKE PAYMENT</a>
+		<a href="/chotels/mpesa/index.php" class="btn btn-primary">MAKE PAYMENT</a>
 		<br>
 	</div>
 </div>
