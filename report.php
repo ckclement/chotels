@@ -5,12 +5,12 @@ if(isset($_POST['search']))
     $valueToSearch = $_POST['valueToSearch'];
     // search in all table columns
     // using concat mysql function
-    $query = "SELECT * FROM `bookingform` WHERE CONCAT(`cdate`, `odate`, `adults`, `children`, `rooms`, `fname`, `lname`, `idnum`, `phone`, `email`, `nationality`) LIKE '%".$valueToSearch."%'";
+    $query = "SELECT * FROM `bform` WHERE CONCAT(`arrival`, `departure`, `first_name`, `last_name`, `email`, `phone`, `adults`, `children`, `room_pref`) LIKE '%".$valueToSearch."%'";
     $search_result = filterTable($query);
     
 }
  else {
-    $query = "SELECT * FROM `bookingform`";
+    $query = "SELECT * FROM `bform`";
     $search_result = filterTable($query);
 }
 
@@ -122,31 +122,27 @@ function filterTable($query)
 		
 		<table>
 			<tr>
-				<th>Check In</th>
-				<th>Check Out</th>
-				<th>Adults</th>
-				<th>Children</th>
-				<th>Rooms</th>
+				<th>Arrival</th>
+				<th>Departure</th>
 				<th>First Name</th>
 				<th>Last Name</th>
-				<th>Id Number</th>
-				<th>Phone</th>
 				<th>Email</th>
-				<th>Nationality</th>
+				<th>Phone</th>
+				<th>Adults</th>
+				<th>Children</th>
+				<th>Room Preference</th>
 			</tr>
 			<?php while($row = mysqli_fetch_array($search_result)):?>
                 <tr>
-                    <td><?php echo $row['cdate'];?></td>
-                    <td><?php echo $row['odate'];?></td>
-                    <td><?php echo $row['adults'];?></td>
-                    <td><?php echo $row['children'];?></td>
-					<td><?php echo $row['rooms'];?></td>
-					<td><?php echo $row['fname'];?></td>
-					<td><?php echo $row['lname'];?></td>
-					<td><?php echo $row['idnum'];?></td>
-					<td><?php echo $row['phone'];?></td>
+                    <td><?php echo $row['arrival'];?></td>
+                    <td><?php echo $row['departure'];?></td>
+                    <td><?php echo $row['first_name'];?></td>
+                    <td><?php echo $row['last_name'];?></td>
 					<td><?php echo $row['email'];?></td>
-					<td><?php echo $row['nationality'];?></td>
+					<td><?php echo $row['phone'];?></td>
+					<td><?php echo $row['adults'];?></td>
+					<td><?php echo $row['children'];?></td>
+					<td><?php echo $row['room_pref'];?></td>
                 </tr>
             <?php endwhile;?>
 		</table>

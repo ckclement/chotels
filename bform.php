@@ -3,6 +3,7 @@
 $responses = [];
 // Check if the form was submitted
 if (isset($_POST['arrival'], $_POST['departure'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['phone'], $_POST['adults'], $_POST['children'], $_POST['room_pref'])) {
+	//$responses[] = 'Email is not valid!';
 	// Process form data
 	// Assign POST variables
 $arrival = htmlspecialchars($_POST['arrival'], ENT_QUOTES);
@@ -14,7 +15,7 @@ $phone = htmlspecialchars($_POST['phone'], ENT_QUOTES);
 $adults = htmlspecialchars($_POST['adults'], ENT_QUOTES);
 $children = htmlspecialchars($_POST['children'], ENT_QUOTES);
 $room_pref = htmlspecialchars($_POST['room_pref'], ENT_QUOTES);
-
+				
 // Validate email adress
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 	$responses[] = 'Email is not valid!';
@@ -45,7 +46,39 @@ if (!$responses) {
 	// Try to send the mail
 	if (mail($to, $subject, $email_template, $headers)) {
 		// Success
-		$responses[] = 'Thank you for your reservation!';		
+		$responses[] = 'Thank you for your reservation!';	
+
+		$mysqli = new mysqli('localhost', 'root', '', 'clementhotels');
+
+		//check if dates are matching
+	if($_POST['arrival'] == $_POST['departure']){
+		$responses[] = "You cannot check in and check out on the same day!";
+	}
+	else{
+		$arrival = $mysqli->real_escape_string($_POST['arrival']);
+		$departure = $mysqli->real_escape_string($_POST['departure']);
+		$first_name = $mysqli->real_escape_string($_POST['first_name']);
+		$last_name = $mysqli->real_escape_string($_POST['last_name']);
+		$email = $mysqli->real_escape_string($_POST['email']);
+		$phone = $mysqli->real_escape_string($_POST['phone']);
+		$adults = $mysqli->real_escape_string($_POST['adults']);
+		$children = $mysqli->real_escape_string($_POST['children']);
+		$room_pref = $mysqli->real_escape_string($_POST['room_pref']);
+		
+		$sql = "INSERT INTO bform (arrival, departure, first_name, last_name, email, phone, adults, children, room_pref) "
+		. "VALUES ('$arrival', '$departure', '$first_name', '$last_name', '$email', '$phone', '$adults', '$children', '$room_pref')";
+				
+		//query success
+		if($mysqli->query($sql) === true){
+			$responses[] = 'Booking successful!';
+			$responses[] = 'Proceed to Payment!';
+			//header("Location: index.php");
+		}
+		else{
+			$responses[] = "Booking failed!";
+		}
+	}
+
 	} else {
 		// Fail; problem with the smtp(simple mail transfer protocol) mail server...
 		$responses[] = 'Message could not be sent! Please check your mail server settings!';
