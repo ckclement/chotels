@@ -31,11 +31,11 @@ if (!preg_match('/^[a-zA-Z]+$/', $last_name)) {
 // If there are no errors
 if (!$responses) {
 	// Where to send the mail? It should be your email address
-	$to      = 'clementquorir@gmail.com';
-	// Mail from
-	$from    = 'ckclement954@gmail.com';
+	$to      = $email;
+	// Mail from smtp server
+	$from    = 'kipngetich.c001@gmail.com';
 	// Mail subject
-	$subject = 'A guest has booked a reservation';
+	$subject = 'Clement Hotels Guest Reservation';
 	// Mail headers
 	$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'Return-Path: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
 	// Capture the email template file as a string
@@ -226,6 +226,9 @@ if (!$responses) {
 <p class="responses"><?php echo implode('<br>', $responses); ?></p>
 <?php endif; ?>
 <input type="submit" value="Reserve">
+<div>
+<a href="http://localhost/clementHotels/mpesa/index.php"><button type="button" class="mpesa">PAY HERE</button></a><br>
+</div>
 
 			</div>
 		</form>

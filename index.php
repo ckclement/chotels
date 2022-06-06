@@ -56,7 +56,7 @@
 	</ul>
 	<div class = "carousel-inner">
 		<div class="carousel-item active">
-			<img src="img/reception.jpg">
+			<img src="img/photo1.jpg">
 		</div>
 	</div>
 </div>
@@ -65,12 +65,12 @@
 <div class="container-fluid padding">
 <div class="row welcome text-center">
 	<div class="col-12">
-		<h1 class="display-4">The ClementHotel</h1>
+		<h1 class="display-4">The Clement Hotels</h1>
 	</div>
 	<hr>
 	<div class="col-12">
 		<p class = "lead">Welcome to Clement Hotels,  
-LUXURY CITY HOTEL IN NAIROBI&copy;. We look forward to making your stay worth while. We take pride in being the best in offering the perfect fusion of luxury in Kenyan hospitality industry, The clement Hotel is a unique destination where guests can spend good time relaxing and working.
+LUXURY CITY HOTEL IN NAIROBI CITY, KENYA&copy;. We look forward to making your stay worth while. We take pride in being the best in offering the perfect fusion of luxury in Kenyan hospitality industry, The clement Hotel is a unique destination where guests can spend good time relaxing and working.
 
 You will also find exquisite dining opportunities here. Our dining selection includes Cafeteria and Restaurant, lobby lounge; Sports Bar; and our Levant-style hospitality.The hotel also has a grand ballroom and The Spa.</p>
 	</div>
@@ -99,7 +99,7 @@ You will also find exquisite dining opportunities here. Our dining selection inc
 		<p> </p>
 		<img src="img/room1.jpg" class="image-fluid" height="400" width="450">
 		<p> </p>
-		<p>Our regular suit is designed to be as functional and accomodating as possible. This beautifully designed room is fitted with a double bed to give more room for extra space.This suit is a 20 US DOLLAR WORTH BUDGET. </p>
+		<p>Our regular suit is designed to be as functional and accomodating as possible. This beautifully designed room is fitted with a double bed to give more room for extra space offering at KES3000 per day. Kindly note to multiply payment amount by the number of days of your stay.  </p>
 		<a href="bform.php" class="btn btn-primary">BOOK HERE</a>
 		<br>
 	</div>
@@ -109,7 +109,7 @@ You will also find exquisite dining opportunities here. Our dining selection inc
 		<p> </p>
 		<img src="img/room3.jpg" class="image-fluid" height="300" width="550">
 		<p> </p>
-		<p>The executive suit is well equiped to support corporate guests. Thanks to the addition of working space-the perfect base away from the office. This is beautifully separated from the living and sleeping area and comes with a king-sized bed, luxurious bathroom and a balcony. A 30 US DOLLAR budget gets you accomodation in the Executive suit. Click on Book button to make your reservation. </p>
+		<p>The executive suit is well equiped to support corporate guests. Thanks to the addition of working space-the perfect base away from the office. This is beautifully separated from the living and sleeping area and comes with a king-sized bed, luxurious bathroom and a balcony. A KES4500 budget gets you accomodation in the Executive suit. Click on Book button to make your reservation. Note to multiply amount to pay by the number of your days to stay. Welcome!</p>
 		<a href="bform.php" class="btn btn-primary">BOOK HERE</a>
 		<br>
 	</div>
